@@ -14,8 +14,8 @@
 class Database {
     private static $dbName = 'productoss';
     private static $dbHost = 'localhost';
-    private static $dbUsername = 'root';
-    private static $dbUserPassword = '';
+    private static $dbUsername = 'deif';
+    private static $dbUserPassword = '17893578951';
     private static $conexion = null;
     function __construct() {
         exit('No se permite instanciar esta clase.');
