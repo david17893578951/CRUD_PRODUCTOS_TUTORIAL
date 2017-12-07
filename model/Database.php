@@ -14,7 +14,8 @@
 class Database {
     private static $dbName = 'productoss';
     private static $dbHost = 'localhost';
-    private static $dbUsername = 'deif';
+    private static $dbPort = '8082';
+    private static $dbUsername = 'postgres';
     private static $dbUserPassword = '17893578951';
     private static $conexion = null;
     function __construct() {
@@ -23,7 +24,7 @@ class Database {
      public static function connect(){
          if(null == self::$conexion){
              try{
-                self::$conexion = new PDO("mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword);
+                self::$pg_connect = new PDO('pgsql:host=ec2-23-21-184-113.compute-1.amazonaws.com;port=5432;dbname=d9be21sf7evp8g', 'sqjxzpbevythta', '7d119514905ecc571b9b77484950dec54fe37c54fa5cdf78a89db4cc732eafda');
                 
              }catch(PDOException $e){
                  die($e->getMessage());
