@@ -24,7 +24,7 @@ class Database {
      public static function connect(){
          if(null == self::$conexion){
              try{
-                self::$pg_connect("jdbc:postgresql:host=ec2-23-21-184-113.compute-1.amazonaws.com port=5432 dbname=d9be21sf7evp8g user=sqjxzpbevythta password=7d119514905ecc571b9b77484950dec54fe37c54fa5cdf78a89db4cc732eafda sslmode=require");
+                self::$pg_connect("postgresql:host=ec2-23-21-184-113.compute-1.amazonaws.com port=5432 dbname=d9be21sf7evp8g user=sqjxzpbevythta password=7d119514905ecc571b9b77484950dec54fe37c54fa5cdf78a89db4cc732eafda sslmode=require");
                 
              }catch(PDOException $e){
                  die($e->getMessage());
